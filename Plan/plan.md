@@ -15,6 +15,8 @@ MVP stage 2
 - Tags for links.
 - Add tags to input form.
 - Search option for those tags.
+- add links from Slack (links people have posted in slack)
+
 
 MVP Stage ? (future aspirations)
 
