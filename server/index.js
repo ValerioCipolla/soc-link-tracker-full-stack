@@ -5,7 +5,7 @@ import { getAllLinks } from "../models/links.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import logger from "morgan";
-import { allowedNodeEnvironmentFlags } from "process";
+import { pool } from "../db/index.js";
 
 const router = express.Router();
 
@@ -44,5 +44,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+  console.log(`Server listening on ${PORT}`, pool);
 });
