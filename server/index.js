@@ -3,6 +3,7 @@ import express from "express";
 // const express = require("express");
 import path from "path";
 import { fileURLToPath } from "url";
+import { getAllLinks } from "../models/links.js";
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -18,8 +19,13 @@ app.get("/api", (req, res) => {
   res.json({ message: "Hello from us!" });
 });
 
-app.get("/api/greeting", (req, res) => {
-  res.json({ message: "Hello to you" });
+app.get("/api/greeting", async (req, res) => {
+  res.json({message: "Hello to you"});
+});
+
+app.get("/api/links", async (req, res) => {
+  const result = await getAllLinks();
+  res.json({ success: true, message: "links found", payload: result });
 });
 
 app.get("*", (req, res) => {

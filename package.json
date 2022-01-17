@@ -7,7 +7,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
-    "build": "cd client && npm install && npm run build"
+    "build": "cd client && npm install && npm run build",
+    "db-create": "node -r dotenv/config ./db/scripts/create-table.js",
+    "db-drop": "node -r dotenv/config ./db/scripts/drop-table.js",
+    "db-seed": "node -r dotenv/config ./db/scripts/seed-table.js",
+    "db-read": "node -r dotenv/config ./db/scripts/read-table.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +25,13 @@
   },
   "homepage": "https://github.com/SchoolOfCode/national-project-week-mates-in-28#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "pg": "^8.7.1"
   },
   "engines": {
     "node": "v16.13.1"
+  },
+  "devDependencies": {
+    "dotenv": "^14.1.0"
   }
 }
