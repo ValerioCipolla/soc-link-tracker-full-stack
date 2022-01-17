@@ -9,6 +9,10 @@ function App() {
     fetch("/api")
       .then((res) => res.json())
       .then((data) => setData(data.message));
+
+    fetch("/api/greeting")
+      .then((res) => res.json())
+      .then((data) => console.log(data.message));
   }, []);
 
   return (
