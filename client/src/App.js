@@ -6,21 +6,15 @@ function App() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("/api", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    fetch("/api")
       .then((res) => res.json())
       .then((data) => setData(data.message));
 
-    fetch("/api/links", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    fetch("/greeting")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+
+    fetch("/links")
       .then((res) => res.json())
       .then((data) => console.log(data));
   }, []);

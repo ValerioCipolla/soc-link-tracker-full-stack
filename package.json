@@ -25,7 +25,10 @@
   },
   "homepage": "https://github.com/SchoolOfCode/national-project-week-mates-in-28#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
+    "morgan": "^1.10.0",
     "pg": "^8.7.1"
   },
   "engines": {
