@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./listitem.css"
 const ListItem = ({ weekNumber, dispatch }) => {
   return (
     <li
@@ -9,6 +9,7 @@ const ListItem = ({ weekNumber, dispatch }) => {
           payload: { week: weekNumber },
         })
       }
+      className="menuItem"
     >
       Week {weekNumber}
     </li>

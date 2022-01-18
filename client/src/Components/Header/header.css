@@ -1,0 +1,13 @@
+h1{
+    font-size: 8rem;
+    padding-left: 10vw;
+    padding-top: 20vh;
+}
+h3{
+    font-size: 2rem;
+    padding-left: 10vw;
+}
+#left{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
