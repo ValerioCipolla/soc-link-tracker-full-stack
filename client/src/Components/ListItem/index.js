@@ -1,4 +1,5 @@
 import React from "react";
+import "./listitem.css"
 
 const ListItem = ({ weekNumber, dispatch, fetchdata }) => {
   return (
@@ -10,6 +11,7 @@ const ListItem = ({ weekNumber, dispatch, fetchdata }) => {
         
         })
       }
+      className="menuItem"
     >
       Week {weekNumber}
     </li>
