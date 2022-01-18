@@ -1,0 +1,10 @@
+#navBar{
+grid-column: 2/3;
+grid-row: 1/2;
+list-style: none;
+color: white;
+background-color: black;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;}
