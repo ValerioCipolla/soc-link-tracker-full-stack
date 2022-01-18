@@ -7,4 +7,8 @@ export const links = [
     name: "mdn docs",
     link: "https://developer.mozilla.org/en-US/",
   },
+  {
+    name: "placeholder",
+    link: "www.thisisaplaceholder.com",
+  },
 ];

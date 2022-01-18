@@ -36,7 +36,7 @@ app.get("/greeting", async (req, res) => {
 app.get("/links", async (req, res) => {
   console.log("run");
   const result = await getAllLinks();
-  res.json({ success: true, message: "links found", payload: result });
+  res.json({ success: true, message: "links found :)", payload: result });
 });
 
 app.get("*", (req, res) => {
