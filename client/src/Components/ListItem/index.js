@@ -1,12 +1,14 @@
 import React from "react";
 import "./listitem.css"
-const ListItem = ({ weekNumber, dispatch }) => {
+
+const ListItem = ({ weekNumber, dispatch, fetchdata }) => {
   return (
     <li
-      onClick={() =>
+      onClick={async() =>
         dispatch({
           type: "set-week-state",
-          payload: { week: weekNumber },
+          payload: { week: weekNumber, result: await fetchdata(weekNumber) },
+        
         })
       }
       className="menuItem"
