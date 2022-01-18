@@ -19,3 +19,8 @@ export async function deleteLinkById(id) {
   const data = await query(`DELETE FROM links WHERE id=$1 RETURNING *;`, [id]);
   return data.rows;
 }
+
+export async function updateLinkById(updatedLink, id) {
+  const data = await query(`UPDATE links SET name = $1, link = $2, week = $3 WHERE id = $4 RETURNING *;`, [updatedLink.name, updatedLink.link, updatedLink.week, id]);
+  return data.rows;
+}

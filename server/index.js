@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { getAllLinks, getLinksByWeek, createLink, deleteLinkById } from "../models/links.js";
+import { getAllLinks, getLinksByWeek, createLink, deleteLinkById, updateLinkById } from "../models/links.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import logger from "morgan";
@@ -70,7 +70,7 @@ app.post("/api/links", async (req, res) => {
   })
 })
 
-//Delete request for hidden page, to remove links from table.
+//Delete request for hidden page, to remove links from table. With link not found result json.
 app.delete("/api/links/:id", async (req, res) => {
   const id = req.params.id;
   const result = await deleteLinkById(id);
@@ -84,6 +84,24 @@ app.delete("/api/links/:id", async (req, res) => {
   res.json({
     success: true,
     message: `link deleted with id ${id}`,
+    payload: result,
+})})
+
+//update request for the api, upadting by id. (may change to a patch)
+app.put("/api/links/:id", async (req, res) => {
+  const id = req.params.id;
+  const updatedLink = req.body;
+  const result = await updateLinkById(updatedLink, id);
+  if (result.length <= 0) {
+    res.json({
+      success: false,
+      message: `link with id ${id} not found`,
+    })
+    return;
+  }
+  res.json({
+    success: true,
+    message: `link updated with id ${id}`,
     payload: result,
 })})
 
