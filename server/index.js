@@ -1,11 +1,10 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { getAllLinks } from "../models/links.js";
+import { getAllLinks, getLinksByWeek } from "../models/links.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import logger from "morgan";
-import { pool } from "../db/index.js";
 
 const router = express.Router();
 
@@ -23,20 +22,36 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.resolve(__dirname, "../client/build")));
-app.use("/", router);
+app.use("/api", router);
 
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from us!" });
 });
 
-app.get("/greeting", async (req, res) => {
+app.get("/api/greeting", async (req, res) => {
   res.json({ message: "Hello to you" });
 });
 
-app.get("/links", async (req, res) => {
-  console.log("run");
+app.get("/api/links", async (req, res) => {
   const result = await getAllLinks();
   res.json({ success: true, message: "links found :)", payload: result });
+});
+
+app.get("/api/links/week/:week", async (req, res) => {
+  const week = req.params.week;
+  const result = await getLinksByWeek(week);
+  if (result.length <= 0) {
+    res.json({
+      success: false,
+      message: `no links from week ${week} were found.`,
+    });
+    return;
+  }
+  res.json({
+    success: true,
+    message: `links from week ${week} found :)`,
+    payload: result,
+  });
 });
 
 app.get("*", (req, res) => {
