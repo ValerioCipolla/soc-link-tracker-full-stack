@@ -5,7 +5,6 @@ import { getAllLinks, getLinksByWeek, createLink, deleteLinkById, updateLinkById
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import logger from "morgan";
-import { create } from "domain";
 
 const router = express.Router();
 
@@ -15,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const PORT = process.env.PORT || 3001;
 
-const app = express();
+export const app = express();
 
 app.use(logger("dev"));
 app.use(cors());
