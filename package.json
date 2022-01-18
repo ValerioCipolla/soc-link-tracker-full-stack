@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config server/index.js",
     "start": "node -r dotenv/config server/index.js",
     "build": "cd client && npm install && npm run build",
     "db-create": "node -r dotenv/config ./db/scripts/create-table.js",
@@ -35,6 +36,7 @@
     "node": "v16.13.1"
   },
   "devDependencies": {
-    "dotenv": "^14.1.0"
+    "dotenv": "^14.1.0",
+    "nodemon": "^2.0.15"
   }
 }
