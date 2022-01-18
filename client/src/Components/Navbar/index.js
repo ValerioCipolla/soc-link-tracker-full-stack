@@ -15,3 +15,4 @@ const Navbar = ({ dispatch }) => {
 };
 
 export default Navbar;
+
