@@ -21,3 +21,13 @@ Day 2 - PLAN
 
 Day 2 18/01, Tuesday.
 Day 2 - MORNING
+
+- Created our api and wrote some basic tests for the api.
+- Created our main page for displaying data.
+
+Day 2 - AFTERNOON
+
+- Re-created main page without making use of router.
+- Display correct list from correct week on main page.
+- Continued formatting CSS for main page.
+- Cleaned up branching.
