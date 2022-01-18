@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { getAllLinks, getLinksByWeek, createLink } from "../models/links.js";
+import { getAllLinks, getLinksByWeek, createLink, deleteLinkById } from "../models/links.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import logger from "morgan";
@@ -69,6 +69,23 @@ app.post("/api/links", async (req, res) => {
     payload: result,
   })
 })
+
+//Delete request for hidden page, to remove links from table.
+app.delete("/api/links/:id", async (req, res) => {
+  const id = req.params.id;
+  const result = await deleteLinkById(id);
+  if (result.length <= 0) {
+    res.json({
+      success: false,
+      message: `link with id ${id} not found`,
+    })
+    return;
+  }
+  res.json({
+    success: true,
+    message: `link deleted with id ${id}`,
+    payload: result,
+})})
 
 //Responds to a request with no response with the api's home page.
 app.get("*", (req, res) => {
