@@ -17,8 +17,14 @@ MVP stage 2
 - Search option for those tags.
 - add links from Slack (links people have posted in slack)
 
-
 MVP Stage ? (future aspirations)
 
 - Implement accounts.
 - Limit update/delete posts to original posting account+admins only.
+
+COMPONENT TREE (REACT)
+APP -> state
+-HEADER
+-NAVBAR
+-LINKS -> setState
+-DISPLAY -> props (state) behaviour(display results)
