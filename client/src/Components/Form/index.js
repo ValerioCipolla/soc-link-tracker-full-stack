@@ -40,25 +40,25 @@ const Form = () => {
 
   return (
     <>
-      <button>HOME</button>
+      <button className="button">HOME</button>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name">Resource Descriptor:</label>
         <input
           name="name"
           type="text"
           onChange={handleChange}
           value={name}
-          placeholder="insert name here"
+          placeholder="eg. NPM documentation"
         ></input>
-        <label htmlFor="link">URL:</label>
+        <label htmlFor="link">Resource URL:</label>
         <input
           name="link"
           type="url"
           onChange={handleChange}
           value={link}
-          placeholder="insert URL here"
+          placeholder="eg. https://docs.npmjs.com"
         ></input>
-        <label htmlFor="week">Pick a week:</label>
+        <label htmlFor="week">Select Week:</label>
         <select name="week" onChange={handleChange} value={week}>
           <option value="1">Week 1</option>
           <option value="2">Week 2</option>
@@ -77,7 +77,7 @@ const Form = () => {
           <option value="15">Week 15</option>
           <option value="16">Week 16</option>
         </select>
-        <button type="submit">SUBMIT</button>
+        <button className="button" type="submit">SUBMIT</button>
       </form>
     </>
   );
