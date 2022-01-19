@@ -1,0 +1,12 @@
+.dropdown-list-item a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-list-item {
+  margin: 0.5rem 0;
+}
+
+.dropdown-list-item a:hover {
+  text-decoration: underline;
+}
