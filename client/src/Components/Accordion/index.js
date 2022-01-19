@@ -3,7 +3,7 @@ import LinkItem from "../LinkItem";
 
 const Accordion = ({ weekNumber }) => {
   const [isActive, setIsActive] = useState(false);
-  const [content, setContent] = useState([]);
+  const [content, setContent] = useState(null);
 
   async function handleClick() {
     const newContent = await fetchdata(weekNumber);
@@ -26,9 +26,12 @@ const Accordion = ({ weekNumber }) => {
       </div>
       {isActive && (
         <ul className="accordion-content">
-          {content.map(function (item) {
-            return <LinkItem key={item.id} name={item.name} url={item.link} />;
-          })}
+          {content &&
+            content.map(function (item) {
+              return (
+                <LinkItem key={item.id} name={item.name} url={item.link} />
+              );
+            })}
         </ul>
       )}
     </div>
