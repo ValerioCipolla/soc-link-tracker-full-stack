@@ -8,22 +8,22 @@ const Dropdown = () => {
       <h1>SOC Resource Link Tracker</h1>
       <p>click the + button to see resources</p>
       <div className="accordion">
-        <Accordion title="Week 1" />
-        <Accordion title="Week 2" />
-        <Accordion title="Week 3" />
-        <Accordion title="Week 4" />
-        <Accordion title="Week 5" />
-        <Accordion title="Week 6" />
-        <Accordion title="Week 7" />
-        <Accordion title="Week 8" />
-        <Accordion title="Week 9" />
-        <Accordion title="Week 10" />
-        <Accordion title="Week 11" />
-        <Accordion title="Week 12" />
-        <Accordion title="Week 13" />
-        <Accordion title="Week 14" />
-        <Accordion title="Week 15" />
-        <Accordion title="Week 16" />
+        <Accordion weekNumber={1}/>
+        <Accordion weekNumber={2}/>
+        <Accordion weekNumber={3}/>
+        <Accordion weekNumber={4}/>
+        <Accordion weekNumber={5}/>
+        <Accordion weekNumber={6}/>
+        <Accordion weekNumber={7}/>
+        <Accordion weekNumber={8}/>
+        <Accordion weekNumber={9}/>
+        <Accordion weekNumber={10} />
+        <Accordion weekNumber={11} />
+        <Accordion weekNumber={12} />
+        <Accordion weekNumber={13} />
+        <Accordion weekNumber={14} />
+        <Accordion weekNumber={15} />
+        <Accordion weekNumber={16} />
       </div>
     </div>
   );
