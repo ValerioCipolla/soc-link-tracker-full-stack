@@ -2,7 +2,16 @@ import React, { useReducer } from "react";
 import Header from "../Header/index.js";
 import Navbar from "../Navbar/index.js";
 import Display from "../Display/index.js";
+import Button from "../Button/index";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
+
 function reducer(state, action) {
   switch (action.type) {
     case "set-week-state":
@@ -26,8 +35,10 @@ const App = () => {
         <Header />
         <Navbar dispatch={dispatch} fetchdata={fetchdata} />
         <Display week={state.week} result={state.result} />
+        <Button handleClick={Button} buttonText="Add new resource"/>
       </div>
     </div>
+  
   );
 };
 
