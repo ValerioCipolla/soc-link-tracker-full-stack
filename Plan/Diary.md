@@ -31,3 +31,33 @@ Day 2 - AFTERNOON
 - Display correct list from correct week on main page.
 - Continued formatting CSS for main page.
 - Cleaned up branching.
+- Created our api and wrote some basic tests for the api.
+- Created our main page for displaying data.
+
+Day 2 - AFTERNOON
+
+- Re-created main page without making use of router.
+- Display correct list from correct week on main page.
+- Continued formatting CSS for main page.
+- Cleaned up branching.
+
+Day 3 19/01, Wednesday.
+Day 3 - MORNING
+
+- Created the input form for new resource links.
+- Created drop-down interface for the resource display page.
+
+Day 3 - AFTERNOON
+
+- Implemented the dropdown as a component in the app.
+- Connected the dropdown display with the data from the database.
+- Set up mobile/destop variations to home/resource page.
+- Inserted historical data into the data seed array for the database.
+
+Day 4 - PLAN
+
+- Continue styling pages.
+- Potentially add tags to data to filter by subject.
+
+Day 4 20/01, Thursday.
+Day 4 - MORNING
