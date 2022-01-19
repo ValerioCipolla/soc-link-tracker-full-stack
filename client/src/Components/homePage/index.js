@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header/index.js";
 import "./homePage.css";
-import Dropdown from "../Dropdown/index.js";
+import Dropdown from "../Dropdown/";
 
 // function reducer(state, action) {
 //   switch (action.type) {
