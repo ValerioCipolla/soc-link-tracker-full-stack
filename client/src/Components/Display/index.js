@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./Display.css"
 const Display = ({ week, result}) => {
   return (
-    <div>
+    <div id="display">
       <h4>
         {week
           ? `Displaying results for week ${week}`
