@@ -5,9 +5,20 @@ const Form = () => {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const [week, setWeek] = useState("1");
+  
+  // async function postData(name, link, week) {
+  //   const data = {name:name, link: link, week: week}
+  //   const res = await fetch("/api/links", {method: "POST", body: JSON.stringify(data)});
+  //   // console.log(await res.json())
+  //   return await res.json();
+  // };
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+    console.log("submit button log");
+    console.log(name, link, week)
+    // postData(name, link, week);
+    await fetch("/api/links", {method:"POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify({name: name, link: link, week: week})});
   }
 
   function handleChange(e) {
