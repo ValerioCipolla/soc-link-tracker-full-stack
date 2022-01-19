@@ -1,5 +1,7 @@
 import React, { useReducer } from "react";
+
 import HomePage from "../homePage";
+
 
 import {
   BrowserRouter as Router,
@@ -10,14 +12,14 @@ import {
 } from "react-router-dom";
 
 
+
 const App = () => {
 
   return (
     <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="Form" element={<HomePage/>}/>
-    </Routes>
-  );
-};
+    </Routes>)
+}
 
 export default App;
