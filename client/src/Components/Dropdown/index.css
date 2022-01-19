@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +9,7 @@
     font-size: 20px;
     background: rgb(255, 255, 255);
   }
-  
+   */
   h1 {
     text-align: center;
     margin: 2rem 0 4rem 0;

@@ -3,14 +3,8 @@ import Header from "../Header/index.js";
 import Navbar from "../Navbar/index.js";
 import Display from "../Display/index.js";
 import "./homePage.css";
-import Button from "../Button/index.js"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Routes
-} from "react-router-dom";
+import Dropdown from "../Dropdown/index.js";
+
 function reducer(state, action) {
   switch (action.type) {
     case "set-week-state":
@@ -29,11 +23,11 @@ const HomePage = () => {
   }
   console.log(state);
   return (
-    
     <div id="grid">
-        <Header />
-        <Navbar dispatch={dispatch} fetchdata={fetchdata} />
-        <Display week={state.week} result={state.result} />
+      <Header />
+      {/* <Navbar dispatch={dispatch} fetchdata={fetchdata} /> */}
+      <Dropdown />
+      {/* <Display week={state.week} result={state.result} /> */}
     </div>
   );
 };
