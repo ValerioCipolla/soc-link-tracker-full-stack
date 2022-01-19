@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import "./index.css";
-
+import {Link} from "react-router-dom";
 const Form = () => {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const [week, setWeek] = useState("1");
 
-  // async function postData(name, link, week) {
-  //   const data = {name:name, link: link, week: week}
-  //   const res = await fetch("/api/links", {method: "POST", body: JSON.stringify(data)});
-  //   // console.log(await res.json())
-  //   return await res.json();
-  // };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -40,7 +34,9 @@ const Form = () => {
 
   return (
     <>
+      <Link to="/">
       <button className="button">HOME</button>
+      </Link>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Resource Descriptor:</label>
         <input

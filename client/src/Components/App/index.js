@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 
 
 import HomePage from "../homePage";
-
+import Form from "../Form";
 
 import {
   BrowserRouter as Router,
@@ -18,7 +18,7 @@ const App = () => {
 
     <Routes>
       <Route path="/" element={<HomePage/>}/>
-      <Route path="Form" element={<HomePage/>}/>
+      <Route path="Form" element={<Form/>}/>
     </Routes>)
 }
 
