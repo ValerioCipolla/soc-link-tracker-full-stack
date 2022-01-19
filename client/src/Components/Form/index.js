@@ -40,6 +40,7 @@ const Form = () => {
 
   return (
     <>
+      <button>HOME</button>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
@@ -47,6 +48,7 @@ const Form = () => {
           type="text"
           onChange={handleChange}
           value={name}
+          placeholder="insert name here"
         ></input>
         <label htmlFor="link">URL:</label>
         <input
@@ -54,6 +56,7 @@ const Form = () => {
           type="url"
           onChange={handleChange}
           value={link}
+          placeholder="insert URL here"
         ></input>
         <label htmlFor="week">Pick a week:</label>
         <select name="week" onChange={handleChange} value={week}>

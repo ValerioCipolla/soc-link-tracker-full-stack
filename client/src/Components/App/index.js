@@ -2,6 +2,7 @@ import React, { useReducer } from "react";
 import Header from "../Header/index.js";
 import Navbar from "../Navbar/index.js";
 import Display from "../Display/index.js";
+import Form from "../Form/index.js";
 import "./App.css";
 
 function reducer(state, action) {
@@ -27,6 +28,7 @@ const App = () => {
         <Header />
         <Navbar dispatch={dispatch} fetchdata={fetchdata} />
         <Display week={state.week} result={state.result} />
+        <Form />
       </div>
     </div>
   );
