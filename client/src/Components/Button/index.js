@@ -1,10 +1,11 @@
 import React from "react";
 import "./style.css"
 
-function Button({ handleClick, buttonText }) {
+
+function Button({  buttonText }) {
   return(
     <div className = "box">
-    <button onClick={handleClick}>{buttonText}</button>;
+    <button>{buttonText}</button>
     </div>
   )
   

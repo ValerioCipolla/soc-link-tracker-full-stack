@@ -3,6 +3,7 @@ import Header from "../Header/index.js";
 import Navbar from "../Navbar/index.js";
 import Display from "../Display/index.js";
 import "./homePage.css";
+import Button from "../Button/index.js"
 import {
   BrowserRouter as Router,
   Switch,
@@ -33,6 +34,9 @@ const HomePage = () => {
         <Header />
         <Navbar dispatch={dispatch} fetchdata={fetchdata} />
         <Display week={state.week} result={state.result} />
+        <Link to="Form">
+        <Button  buttonText="Add New Resource"/>
+        </Link>
     </div>
   );
 };
