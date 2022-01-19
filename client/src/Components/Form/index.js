@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./index.css";
 import {Link} from "react-router-dom";
+import Button from "../Button";
+
 const Form = () => {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
@@ -35,7 +37,8 @@ const Form = () => {
   return (
     <>
       <Link to="/">
-      <button className="button">HOME</button>
+      {/* <button className="button">HOME</button> */}
+      <Button buttonText={"Home"}/>
       </Link>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Resource Descriptor:</label>
@@ -73,7 +76,7 @@ const Form = () => {
           <option value="15">Week 15</option>
           <option value="16">Week 16</option>
         </select>
-        <button className="button" type="submit">SUBMIT</button>
+        <button className="button" type="submit">Submit</button>
       </form>
     </>
   );

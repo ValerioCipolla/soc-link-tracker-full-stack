@@ -4,9 +4,8 @@ import "./index.css";
 
 const Dropdown = () => {
   return (
-    <div>
-      <h1>SOC Resource Link Tracker</h1>
-      <p>click the + button to see resources</p>
+
+
       <div className="accordion">
         <Accordion weekNumber={1}/>
         <Accordion weekNumber={2}/>
@@ -25,7 +24,6 @@ const Dropdown = () => {
         <Accordion weekNumber={15} />
         <Accordion weekNumber={16} />
       </div>
-    </div>
   );
 };
 
