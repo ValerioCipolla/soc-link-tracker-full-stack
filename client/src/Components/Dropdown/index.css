@@ -10,35 +10,32 @@
     background: rgb(255, 255, 255);
   }
    */
-  
-  .accordion {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-  }
-  
-  .accordion-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    cursor: pointer;
-    background-color: #000000;
-    color: white;
-  }
-  
-  .accordion-title:hover {
-    background-color: #3ab4cc;
-  }
-  
-  .accordion-title,
-  .accordion-content {
-    padding: 1rem;
-  }
-  
-  .accordion-content {
-    background-color: #39b9d2;
-  }
-  
 
-  
+.accordion {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
 
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+}
+
+.accordion-title:hover {
+  background-color: #3ab4cc;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+}
+
+.accordion-content {
+  background-color: #39b9d2;
+  list-style: none;
+}
