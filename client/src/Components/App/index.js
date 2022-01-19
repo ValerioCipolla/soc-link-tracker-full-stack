@@ -3,6 +3,8 @@ import Header from "../Header/index.js";
 import Navbar from "../Navbar/index.js";
 import Display from "../Display/index.js";
 import "./App.css";
+import Form from "../Form/index.js";
+
 function reducer(state, action) {
   switch (action.type) {
     case "set-week-state":
@@ -26,6 +28,7 @@ const App = () => {
         <Header />
         <Navbar dispatch={dispatch} fetchdata={fetchdata} />
         <Display week={state.week} result={state.result} />
+        <Form />
       </div>
     </div>
   );
