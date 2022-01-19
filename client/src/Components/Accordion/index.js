@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import LinkItem from "../LinkItem";
 
 const Accordion = ({ weekNumber }) => {
   const [isActive, setIsActive] = useState(false);
@@ -26,7 +27,7 @@ const Accordion = ({ weekNumber }) => {
       {isActive && (
         <div className="accordion-content">
           {content.map(function (item) {
-            return <li>{item.name}</li>;
+            return <LinkItem name={item.name} url={item.link} />;
           })}
         </div>
       )}
