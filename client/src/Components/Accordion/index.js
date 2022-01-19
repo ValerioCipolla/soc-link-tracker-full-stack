@@ -25,11 +25,11 @@ const Accordion = ({ weekNumber }) => {
         <div>{isActive ? "-" : "+"}</div>
       </div>
       {isActive && (
-        <div className="accordion-content">
+        <ul className="accordion-content">
           {content.map(function (item) {
-            return <LinkItem name={item.name} url={item.link} />;
+            return <LinkItem key={item.id} name={item.name} url={item.link} />;
           })}
-        </div>
+        </ul>
       )}
     </div>
   );
