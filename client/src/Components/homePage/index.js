@@ -34,9 +34,6 @@ const HomePage = () => {
         <Header />
         <Navbar dispatch={dispatch} fetchdata={fetchdata} />
         <Display week={state.week} result={state.result} />
-        <Link to="Form">
-        <Button  buttonText="Add New Resource"/>
-        </Link>
     </div>
   );
 };
