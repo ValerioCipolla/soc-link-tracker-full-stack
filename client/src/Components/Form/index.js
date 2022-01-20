@@ -45,6 +45,7 @@ const Form = () => {
           onChange={handleChange}
           value={name}
           placeholder="eg. NPM documentation"
+          required={true}
         ></input>
         <label htmlFor="link">Resource URL:</label>
         <input
@@ -53,6 +54,7 @@ const Form = () => {
           onChange={handleChange}
           value={link}
           placeholder="eg. https://docs.npmjs.com"
+          required={true}
         ></input>
         <label htmlFor="week">Select Week:</label>
         <select name="week" onChange={handleChange} value={week}>
