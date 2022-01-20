@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { getAllLinks, getLinksByWeek, createLink, deleteLinkById, updateLinkById } from "../models/links.js";
+import { getAllLinks, getLinksByWeek, createLink, deleteLinkById, updateLinkById, getLinksByTag } from "../models/links.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import logger from "morgan";
@@ -112,4 +112,22 @@ app.get("*", (req, res) => {
 //displays the port that the server is listening on.
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
+});
+
+//find links by tag, with no links found message
+app.get("/api/links/week/:tag", async (req, res) => {
+  const tag = req.params.tag;
+  const result = await getLinksByTag(tag);
+  if (result.length <= 0) {
+    res.json({
+      success: false,
+      message: `no links with the tag of ${tag} were found.`,
+    });
+    return;
+  }
+  res.json({
+    success: true,
+    message: `links with the tag of ${tag} found :)`,
+    payload: result,
+  });
 });

@@ -6,19 +6,21 @@ const Form = () => {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const [week, setWeek] = useState("1");
+  const [tag, setTag] = useState("")
 
   async function handleSubmit(e) {
     e.preventDefault();
     console.log("submit button log");
-    console.log(name, link, week);
+    console.log(name, link, week, tag);
     // postData(name, link, week);
     await fetch("/api/links", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: name, link: link, week: week }),
+      body: JSON.stringify({ name: name, link: link, week: week, tag: tag }),
     });
     setName("");
-    setLink("");
+    setLink("")
+    setTag("");
     alert("Resource created successfully!");
   }
 
@@ -29,6 +31,8 @@ const Form = () => {
       setLink(e.target.value);
     } else if (e.target.name === "week") {
       setWeek(e.target.value);
+    } else if (e.target.value === "tag") {
+      setTag(e.target.value);
     }
   }
 
@@ -72,6 +76,23 @@ const Form = () => {
           <option value="14">Week 14</option>
           <option value="15">Week 15</option>
           <option value="16">Week 16</option>
+        </select>
+        <label htmlfor="tag">Select Main Search Term for this Resource:</label>
+        <select name="tag" onchange={handleChange} value={tag}>
+        <option value="Agile">Agile</option>
+        <option value="Architecture">Architeture</option>
+        <option value="API">API</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="CSS">CSS</option>
+        <option value="Design">Design</option>
+        <option value="Express">Express</option>
+        <option value="Javascript">Javascript</option>
+        <option value="Mindset">Mindset</option>
+        <option value="Node">Node</option>
+        <option value="React">React</option>
+        <option value="SQL">SQL</option>
+        <option value="Testing">Testing</option>
+        <option value="Workflow">Workflow</option>
         </select>
         <button className="button" type="submit">
           Submit

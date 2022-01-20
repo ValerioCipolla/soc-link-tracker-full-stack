@@ -24,3 +24,8 @@ export async function updateLinkById(updatedLink, id) {
   const data = await query(`UPDATE links SET name = $1, link = $2, week = $3 WHERE id = $4 RETURNING *;`, [updatedLink.name, updatedLink.link, updatedLink.week, id]);
   return data.rows;
 }
+
+export async function getLinksByTag(tag) {
+  const data = await query(`SELECT * FROM links WHERE tag =$1`, [tag]);
+  return data.rows;
+}

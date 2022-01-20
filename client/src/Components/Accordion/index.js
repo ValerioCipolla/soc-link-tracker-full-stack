@@ -29,7 +29,7 @@ const Accordion = ({ weekNumber }) => {
           {content &&
             content.map(function (item) {
               return (
-                <LinkItem key={item.id} name={item.name} url={item.link} />
+                <LinkItem key={item.id} name={item.name} url={item.link} tag={item.tag}/>
               );
             })}
         </ul>

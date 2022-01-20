@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-const LinkItem = ({ name, url }) => {
+const LinkItem = ({ name, url, tag }) => {
   return (
     <li className="dropdown-list-item">
       <a
