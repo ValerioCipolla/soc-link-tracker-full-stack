@@ -11,7 +11,7 @@ export async function getLinksByWeek(week) {
 }
 
 export async function createLink(newLink) {
-  const data = await query(`INSERT INTO links (name, link, week) VALUES ($1, $2, $3) RETURNING *;`, [newLink.name, newLink.link, newLink.week]);
+  const data = await query(`INSERT INTO links (name, link, week, tag) VALUES ($1, $2, $3, $4) RETURNING *;`, [newLink.name, newLink.link, newLink.week, newLink.tag]);
   return data.rows;
 }
 
@@ -21,7 +21,7 @@ export async function deleteLinkById(id) {
 }
 
 export async function updateLinkById(updatedLink, id) {
-  const data = await query(`UPDATE links SET name = $1, link = $2, week = $3 WHERE id = $4 RETURNING *;`, [updatedLink.name, updatedLink.link, updatedLink.week, id]);
+  const data = await query(`UPDATE links SET name = $1, link = $2, week = $3 WHERE id = $4 RETURNING *;`, [updatedLink.name, updatedLink.link, updatedLink.week, updatedTag.week, id]);
   return data.rows;
 }
 

@@ -9,7 +9,8 @@ const LinkItem = ({ name, url, tag }) => {
         target="_blank"
         href={url}
       >
-        {name}
+        {name} 
+        {tag}
       </a>
     </li>
   );

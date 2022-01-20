@@ -79,20 +79,20 @@ const Form = () => {
         </select>
         <label htmlfor="tag">Select Main Search Term for this Resource:</label>
         <select name="tag" onchange={handleChange} value={tag}>
-        <option value="Agile">Agile</option>
-        <option value="Architecture">Architeture</option>
-        <option value="API">API</option>
-        <option value="Computer Science">Computer Science</option>
-        <option value="CSS">CSS</option>
-        <option value="Design">Design</option>
-        <option value="Express">Express</option>
-        <option value="Javascript">Javascript</option>
-        <option value="Mindset">Mindset</option>
-        <option value="Node">Node</option>
-        <option value="React">React</option>
-        <option value="SQL">SQL</option>
-        <option value="Testing">Testing</option>
-        <option value="Workflow">Workflow</option>
+        <option value="#Agile">Agile</option>
+        <option value="#Architecture">Architeture</option>
+        <option value="#API">API</option>
+        <option value="#Computer Science">Computer Science</option>
+        <option value="#CSS">CSS</option>
+        <option value="#Design">Design</option>
+        <option value="#Express">Express</option>
+        <option value="#Javascript">Javascript</option>
+        <option value="#Mindset">Mindset</option>
+        <option value="#Node">Node</option>
+        <option value="#React">React</option>
+        <option value="#SQL">SQL</option>
+        <option value="#Testing">Testing</option>
+        <option value="#Workflow">Workflow</option>
         </select>
         <button className="button" type="submit">
           Submit

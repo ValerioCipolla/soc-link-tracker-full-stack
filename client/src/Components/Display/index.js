@@ -12,6 +12,7 @@ const Display = ({ week, result}) => {
         {result===null? "No results to display" : result.payload.map(function (link) {
           return <li key={link.id}>
             {link.name}
+            {link.tag}
           </li>
         })}
       </ul>
