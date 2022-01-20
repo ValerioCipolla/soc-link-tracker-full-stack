@@ -1,5 +1,5 @@
 import { links } from "../../db/seed-data";
-import { getAllLinks, getLinksByWeek } from "./links";
+import { createLink, getAllLinks, getLinksByWeek } from "./links";
 
 describe("testing getting data back", () => {
   test("getting all links back", () => {
@@ -113,6 +113,25 @@ describe("testing getting data back", () => {
         name: "Lighthouse Report Viewer Tool",
         link: "https://googlechrome.github.io/lighthouse/viewer/",
         week: 3,
+      },
+    ];
+    expect(actual).toStrictEqual(expected);
+  });
+});
+
+describe("testing creating resource", () => {
+  test("creating a new resource", () => {
+    const actual = createLink(links, {
+      name: "useReducer WebDevSimplified video",
+      link: "https://www.youtube.com/watch?v=kK_Wqx3RnHk",
+      week: 8,
+    });
+    const expected = [
+      ...links,
+      {
+        name: "useReducer WebDevSimplified video",
+        link: "https://www.youtube.com/watch?v=kK_Wqx3RnHk",
+        week: 8,
       },
     ];
     expect(actual).toStrictEqual(expected);
