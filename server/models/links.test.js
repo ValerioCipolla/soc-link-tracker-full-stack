@@ -1,5 +1,11 @@
 import { links } from "../../db/seed-data";
-import { createLink, getAllLinks, getLinksByWeek } from "./links";
+import {
+  createLink,
+  deleteLink,
+  getAllLinks,
+  getLinksByWeek,
+  updateLink,
+} from "./links";
 
 describe("testing getting data back", () => {
   test("getting all links back", () => {
@@ -134,6 +140,53 @@ describe("testing creating resource", () => {
         week: 8,
       },
     ];
+    expect(actual).toStrictEqual(expected);
+  });
+});
+
+describe("testing updating a resource", () => {
+  test("updating an existing resource", () => {
+    const oldLink = {
+      name: "Lighthouse Report Viewer Tool",
+      link: "https://googlechrome.github.io/lighthouse/viewer/",
+      week: 3,
+    };
+
+    const newLink = {
+      name: "Lighthouse Report Viewer",
+      link: "https://googlechrome.github.io/lighthouse/viewer/",
+      week: 3,
+    };
+
+    const actual = updateLink(links, oldLink, newLink);
+    const oldLinkIndex = links.findIndex((item) => item.name === oldLink.name);
+    const expected = [
+      ...links.slice(0, oldLinkIndex),
+      newLink,
+      ...links.slice(oldLinkIndex),
+    ];
+    expect(actual).toStrictEqual(expected);
+  });
+});
+
+describe("testing deleting a resource", () => {
+  test("deleting a resource", () => {
+    const linkToDelete = {
+      name: "Jest Testing Library Github repo",
+      link: "https://github.com/testing-library/jest-dom",
+      week: 8,
+    };
+
+    const actual = deleteLink(links, linkToDelete);
+    const linkToDeleteIndex = links.findIndex(
+      (item) => item.name === linkToDelete.name
+    );
+
+    const expected = [
+      ...links.slice(0, linkToDeleteIndex),
+      ...links.slice(linkToDeleteIndex + 1),
+    ];
+
     expect(actual).toStrictEqual(expected);
   });
 });

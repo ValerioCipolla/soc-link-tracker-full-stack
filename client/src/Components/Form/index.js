@@ -45,6 +45,7 @@ const Form = () => {
           onChange={handleChange}
           value={name}
           placeholder="eg. NPM documentation"
+          required={true}
         ></input>
         <label htmlFor="link">Resource URL:</label>
         <input
