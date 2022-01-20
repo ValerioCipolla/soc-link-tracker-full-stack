@@ -116,7 +116,7 @@ export const links = [
     link: "https://tutorialdeep.com/sql/sql-and-clause/",
     week: 5,
   },{
-    name: "Data Tyoes (Transact-SQL) docs",
+    name: "Data Types (Transact-SQL) docs",
     link: "https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15",
     week: 5,
   },{
@@ -200,7 +200,7 @@ export const links = [
     link: "https://create-react-app.dev/docs/getting-started/",
     week: 7,
   },{
-    name: "Why React Hooe Uses const stackoverflow answer",
+    name: "Why React Hook Uses const stackoverflow answer",
     link: "https://stackoverflow.com/questions/58860021/why-react-hook-usestate-uses-const-and-not-let",
     week: 7,
   },{
