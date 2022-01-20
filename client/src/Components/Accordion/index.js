@@ -19,9 +19,13 @@ const Accordion = ({ weekNumber }) => {
   }
 
   return (
-    <div className="accordion-item">
-      <div className="accordion-title" onClick={handleClick}>
-        <div>Week {weekNumber}</div>
+    <div className="accordion-item" data-testid="accordion-test">
+      <div
+        className="accordion-title"
+        data-testid="accordion-title-test"
+        onClick={handleClick}
+      >
+        <div data-testid="accordion-text-test">Week {weekNumber}</div>
         <div>{isActive ? "-" : "+"}</div>
       </div>
       {isActive && (

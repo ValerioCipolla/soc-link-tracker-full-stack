@@ -5,7 +5,7 @@ import "./style.css"
 function Button({  buttonText }) {
   return(
     <div className = "box">
-    <button>{buttonText}</button>
+    <button data-testid="button-test">{buttonText}</button>
     </div>
   )
   
