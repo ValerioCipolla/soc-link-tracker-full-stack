@@ -1,4 +1,4 @@
-![Banner](.\images\SoC_Link_Tracker_.png?raw=true "SoC Link Tracker")
+![Banner](./images/SoC_Link_Tracker_.png?raw=true "SoC Link Tracker")
 
 # School of Code Link Tracker
 
@@ -33,8 +33,8 @@ The application was created in 4 days, following an Agile way of working with da
 
 Here I use useState to track the state of my form, the handleChange function to change and manage the state of 3 separate input fields, and the handleSubmit function to handle the submission of the form, using the different states to send a post request to the database to create a new resource with those specific inputs. Also, upon submission, I clean up the state and the input fields and alert the user that the resource was created successfully.
 
-![Banner](./images\carbon.png "SoC Link Tracker")
+![Banner](./images/carbon.png "SoC Link Tracker")
 
 ## Credits
 
-This project was created with the help of [Macsen](https://github.com/MacsenSM), [Ravi Gordon](https://github.com/rg460) and [Ben Gray](https://github.com/Gray593)
+This project was created with the help of [Macsen Sully-Morgan](https://github.com/MacsenSM), [Ravi Gordon](https://github.com/rg460) and [Ben Gray](https://github.com/Gray593)
