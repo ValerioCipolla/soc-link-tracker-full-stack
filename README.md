@@ -1,22 +1,40 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6716062&assignment_repo_type=AssignmentRepo)
-# National Bootcamp - Week Nine Project Brief
+![Banner](.\images\SoC_Link_Tracker_.png?raw=true "SoC Link Tracker")
 
-For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!
+# School of Code Link Tracker
 
-To do this, you’ll need to take the time to understand your user (a bootcamper), their experiences, and their problems. What do they need? What problem might they have that your application could solve for them? How can you get into the mindset of your user and keep them at the centre of your problem-solving?
+For project week (week 9 of a 16 weeks long software development bootcamp) at [School of Code](https://github.com/SchoolOfCode) we were asked to create something that would solve a problem for us, and other bootcampers.
 
-The high level outcomes from this project should be:
+## The Problem
 
-- A minimum viable product (MVP) showcasing an innovative full stack application which meets the user need you’ve identified
-- A presentation, complete with how you worked as a team and a demonstration of the project
+The problem we set out to solve was: keeping tracks of all the resources that wre given to us during the bootcamp (some of them throught the zoom chat, other in Slack, or just spoken about).
 
-Your project application should:
+## The Solution
 
-- Include a user experience created in React
-- Build a REST API which is used by your front-end
-- Be supported by a Postgresql database with multiple tables
-- Be built and managed in an agile way
+We decided we were going to build an easy-to-use full stack application that allowed users and bootcampers to keep track of all of those resources and made it easy to find them when they needed them.
 
-Remember, you only have a few days to code a solution, so being agile is key. That means brainstorming what you want to build, and working in sprints to deliver value each time. After each sprint, you can reassess and either continue on course or iterate towards a better solution. Have a plan which is incremental steps, rather than all or nothing.
+## Tech Stack
 
-Click the link to see the [Project Guidelines](https://github.com/SchoolOfCode/project-guidelines/blob/master/project-week.md)
+This is a full stack application and the technologies we picked are:
+
+- node.js
+- react JS
+- postgreSQL
+- jest
+
+We picked these technologies because we had already use them during the previous weeks of the bootcamp and they proved to be easy to use and to work well together.
+
+## The Process
+
+We started by creating a single application containing the server (a node app created using express) and the client (a react application created using create-react-app). Then we created the database on Heroku and deployed our application (still on Heroku) instantly, this way we knew our stack worked well together and we could build on top of it, withouth fearing problems with deployment later during the week.
+
+The application was created in 4 days, following an Agile way of working with daily stand-ups and sprints. The main focus was to create something valuable and fully working that we could show in our presentation at the end of the week.
+
+## A code snippet I am proud of
+
+Here I use useState to track the state of my form, the handleChange function to change and manage the state of 3 separate input fields, and the handleSubmit function to handle the submission of the form, using the different states to send a post request to the database to create a new resource with those specific inputs. Also, upon submission, I clean up the state and the input fields and alert the user that the resource was created successfully.
+
+![Banner](./images\carbon.png "SoC Link Tracker")
+
+## Credits
+
+This project was created with the help of [Macsen](https://github.com/MacsenSM), [Ravi Gordon](https://github.com/rg460) and [Ben Gray](https://github.com/Gray593)
