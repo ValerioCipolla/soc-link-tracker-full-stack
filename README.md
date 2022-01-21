@@ -1,6 +1,6 @@
 ![Banner](./images/SoC_Link_Tracker_.png?raw=true "SoC Link Tracker")
 
-checkout the finished product -> [SoC Link Tracker](https://soc-links-tracker.herokuapp.com/)
+checkout the finished product -> <a href="https://soc-links-tracker.herokuapp.com/" target="_blank">Soc Link Tracker</a>
 
 # School of Code Link Tracker
 
